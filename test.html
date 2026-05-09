@@ -407,7 +407,7 @@
 </div>
 
 <script>
-  const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/1u92Ch5ZnbxGypIERHey8lkau8giOtzSjFyWegdhSHv4/pub?output=csv";
+  const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRuSw5jl4qGH2GTE_zvE_nDHqKULbK5XH0Wl0Dpl4OoJQNSDYs7DHX5AdNTmhl8ukGuThXrzKddE58m/pub?output=csv";
     //"https://docs.google.com/spreadsheets/d/e/1u92Ch5ZnbxGypIERHey81kau8gi0tzSjFyWegdhSHv4/pub?output=csv";
     //"https://docs.google.com/spreadsheets/d/e/2PACX-1vQfvjGjPA_YlkgQs2uyZqp3jHWE0FpPVlSm4iIELBFbP0ycryTnNBLF5yluwnNBhzJEJMTeAEYraAQ0/pub?output=csv";
 
@@ -433,9 +433,9 @@
       const res = await fetch(SHEET_URL);
       const text = await res.text();
       allItems = text.split(/\r?\n/).map(row => {
-        const [id, name, description, price, img, cat] = row.split(",");
-        return { id, name, description, price, img, cat };
-      }).filter(i => i.id && i.id.trim() !== "");
+        const [id, name, description, price, img, cat, mostrar] = row.split(",");
+        return { id, name, description, price, img, cat, mostrar};
+      }).filter(i => i.id && i.id.trim() !== "" && i.mostrar == 1);
       render();
     } catch (e) {
       showError();
