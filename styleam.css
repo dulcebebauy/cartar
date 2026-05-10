@@ -362,7 +362,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       body { font-size: 17px; }
-      .grid { grid-template-columns: 1fr 1fr; gap: 12px;}
+      .grid { grid-template-columns: 1fr 1fr; gap: 12px; grid-template-columns: 1fr;}
       .card-img, .card-img-placeholder { height: 150px; }
       .card-body { padding: 12px; }
       .card-name { font-size: 1rem; }
