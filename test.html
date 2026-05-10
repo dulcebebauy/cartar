@@ -156,6 +156,12 @@
       <div class="grid">
         ${filtered.map(item => `
           <div class="card">
+            ${topProducts.includes(item.id) ? `
+              <div class="badge-hot" onclick="toggleTooltip(this)">
+                🔥
+                <span class="tooltip">Producto muy vendido</span>
+              </div>
+            ` : ""}
             ${item.img
               ? `<img class="card-img" src="${item.img}" alt="${item.name || ''}"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">`
