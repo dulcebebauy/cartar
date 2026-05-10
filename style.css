@@ -59,10 +59,10 @@
 
     .logo-fallback { font-size: 2rem; }
 
-    .header-text { color: white; transition: opacity 0.3s ease;   font-family: "Lobster Two", sans-serif;}
+    .header-text { color: white; transition: opacity 0.3s ease}
     .header.small .header-text { display: none; }
 
-    .header-text h1 { font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
+    .header-text h1 { font-size: 1.6rem; font-weight: 700; line-height: 1.2; font-family: "Lobster Two", sans-serif;}
     .header-text p  { font-size: 1rem; opacity: 0.88; }
 
     /* ── FILTER BAR ── */
