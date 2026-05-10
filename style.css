@@ -168,7 +168,17 @@
         cursor: pointer;
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       }
-      
+      .badge-hot-text {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: #ff5a3c;
+        color: white;
+        font-size: 11px;
+        padding: 4px 8px;
+        border-radius: 20px;
+        font-weight: 500;
+      }
       /* Tooltip */
       .badge-hot .tooltip {
         position: absolute;
