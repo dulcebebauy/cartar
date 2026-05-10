@@ -158,7 +158,9 @@
           <div class="card">
             ${topProducts.includes(item.id) ? `
               <div class="badge-hot" onclick="toggleTooltip(this)">
-                🔥 Más vendido
+                <div class="badge-hot-text">
+                  🔥 Más vendido
+                </div>
                 <span class="tooltip">Producto muy vendido</span>
               </div>
             ` : ""}
