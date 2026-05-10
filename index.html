@@ -430,7 +430,10 @@
     try {
       const res = await fetch(SHEET_URL);
       const text = await res.text();
-      allItems = text.split(/\r?\n/).map(row => {
+      allItems = text
+        .split(/\r?\n/)
+        .slice(1)
+        .map(row => {
         const [id, name, description, price, img, cat] = row.split(",");
         return { id, name, description, price, img, cat };
       }).filter(i => i.id && i.id.trim() !== "");
