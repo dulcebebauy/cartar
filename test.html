@@ -113,6 +113,7 @@
       allItems = allItems.sort((a, b) => {
         return a.cat.localeCompare(b.cat, 'es');
       });
+      calculateTopProducts();
       render();
     } catch (e) {
       showError();
