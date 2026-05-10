@@ -111,7 +111,7 @@
         return { id, name, description, price, img, cat, mostrar};
       }).filter(i => i.id && i.id.trim() !== "" && i.mostrar == 1);
       allItems = allItems.sort((a, b) => {
-        return a.cat.localeCompare(b.nombre, 'es');
+        return a.cat.localeCompare(b.cat, 'es');
       });
       render();
     } catch (e) {
