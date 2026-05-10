@@ -158,11 +158,8 @@
         ${filtered.map(item => `
           <div class="card">
             ${topProducts.includes(item.id) ? `
-              <div class="badge-hot" onclick="toggleTooltip(this)">
-                <div class="badge-hot-text">
+              <div class="badge-hot-text"  onclick="toggleTooltip(this)">
                   🔥 Más vendido
-                </div>
-                <span class="tooltip">Producto muy vendido</span>
               </div>
             ` : ""}
             ${item.img
