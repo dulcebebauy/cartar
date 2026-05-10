@@ -153,8 +153,42 @@
       border: 1px solid var(--border);
       box-shadow: 0 4px 14px rgba(127,175,168,0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
+      position: relative;
+    }      
+      /* 🔥 Badge */
+      .badge-hot {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: #ff5a3c;
+        color: white;
+        font-size: 14px;
+        padding: 6px 8px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      }
+      
+      /* Tooltip */
+      .badge-hot .tooltip {
+        position: absolute;
+        bottom: 35px;
+        right: 0;
+        background: #333;
+        color: #fff;
+        font-size: 12px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        white-space: nowrap;
+        display: none;
+      }
+      
+      /* Desktop hover */
+      @media (hover: hover) {
+        .badge-hot:hover .tooltip {
+          display: block;
+        }
+      }
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 10px 28px rgba(127,175,168,0.28);
