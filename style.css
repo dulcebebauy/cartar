@@ -59,7 +59,7 @@
 
     .logo-fallback { font-size: 2rem; }
 
-    .header-text { color: white; transition: opacity 0.3s ease; }
+    .header-text { color: white; transition: opacity 0.3s ease;   font-family: "Lobster Two", sans-serif;}
     .header.small .header-text { display: none; }
 
     .header-text h1 { font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
