@@ -359,17 +359,18 @@
     const catTitle = document.getElementById("cat-title");
     const catCount = document.getElementById("cat-count");
 
-    const searchTerm = (document.getElementById("searchInput")?.value || "").trim().toLowerCase();
+    const normalize = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const searchTerm = normalize((document.getElementById("searchInput")?.value || "").trim());
 
     let filtered = activeFilter === "all"
       ? allItems
       : allItems.filter(i => i.cat === activeFilter);
 
-    // Aplicar búsqueda
+    // Aplicar búsqueda (ignora tildes y mayúsculas)
     if (searchTerm) {
       filtered = filtered.filter(i =>
-        (i.name || "").toLowerCase().includes(searchTerm) ||
-        (i.description || "").toLowerCase().includes(searchTerm)
+        normalize(i.name || "").includes(searchTerm) ||
+        normalize(i.description || "").includes(searchTerm)
       );
     }
 
