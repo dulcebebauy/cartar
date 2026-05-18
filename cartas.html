@@ -86,7 +86,7 @@
   // Estas variables deben estar definidas en config.js:
   const SUPABASE_URL = "https://rdxnnngdnslxnsgtgqzf.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_hfbsKDlF0mPBNIbU7ACCeg_p2WZsMGh";
-  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const supabase_prods = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   const CAT_INFO = {
     all:               { emoji: "🩵", label: "Todo" },
@@ -108,7 +108,7 @@
   async function loadData() {
     showLoading();
     try {
-      const { data, error } = await supabase
+      const { data, error } = await supabase_prods
         .from("productos")
         .select("id, nombre, descripcion, precio, categoria, cantidad_ventas, mostrar_precio_carta")
         .eq("activo", true)
